@@ -17,20 +17,10 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![SDG](https://img.shields.io/badge/SDG-3%20%7C%204-green)
 
----
 
-## 📌 Table of Contents
-- [Problem](##-problem)
-- [Solution](##-solution)
-- [Features](##-features)
-- [Tech Stack](##-tech-stack)
-- [Demo](##-demo)
-- [Team](##-team)
-- [SDGs](##-sdgs)
----
 
 ##  Problem
-In emergency situations, most people panic and lack the knowledge to provide immediate first-aid. Existing solutions are English-only, text-heavy, and inaccessible to non-English speakers and people in rural areas.
+In emergencies, most people panic and lack the knowledge to provide immediate first aid. Existing solutions are English-only, text-heavy, and inaccessible to non-English speakers and people in rural areas.
 
 ---
 
@@ -42,7 +32,7 @@ RESQ is a web-based interactive first-aid assistant that guides users through em
 ##  Features
 - 🩹 **Injury Selector** – Visual menu for quick injury identification
 - 🎙️ **Voice Input** – Speak in Telugu/Hindi, no typing needed
-- 🌿 **Indian Home Remedies** – Turmeric, aloe vera, neem based suggestions
+- 🌿 **Indian Home Remedies** – Turmeric, aloe vera, neem-based suggestions
 - 📊 **Severity Checker** – Mild / Moderate / Severe classification
 - 🏥 **Nearby Hospital Finder** – Real-time location based search
 - 📞 **One-Tap 108 Call** – Direct emergency dial
