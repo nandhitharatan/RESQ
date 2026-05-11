@@ -20,13 +20,13 @@
 ---
 
 ## 📌 Table of Contents
-- [Problem](#-problem)
-- [Solution](#-solution)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Demo](#-demo)
-- [Team](#-team)
-- [SDGs](#-sdgs)
+- [Problem](##-problem)
+- [Solution](##-solution)
+- [Features](##-features)
+- [Tech Stack](##-tech-stack)
+- [Demo](##-demo)
+- [Team](##-team)
+- [SDGs](##-sdgs)
 ---
 
 ##  Problem
