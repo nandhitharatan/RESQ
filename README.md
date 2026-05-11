@@ -26,7 +26,9 @@ In emergencies, most people panic and lack the knowledge to provide immediate fi
 
 ##  Solution
 RESQ is a web-based interactive first-aid assistant that guides users through emergencies in their own language — with voice input, home remedies, and real-time hospital finding.
-
+--
+## How to Run
+Open `index.html` in any modern browser. No installation needed.
 ---
 
 ##  Features
