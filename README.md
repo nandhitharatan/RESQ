@@ -1,6 +1,16 @@
-# 🚑 RESQ – Interactive Digital First-Aid Assistant
+<table>
+  <tr>
+    <td>
+      <img src="assets/logo.png" width="100" height="100"/>
+    </td>
+    <td>
+      <h1>RESQ – Interactive Digital First-Aid Assistant</h1>
+      <i>"In an emergency, every second counts."</i>
+    </td>
+  </tr>
+</table>
 
-> *"In an emergency, every second counts."*
+
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 ![HTML](https://img.shields.io/badge/Built%20With-HTML%2FCSS%2FJS-orange)
