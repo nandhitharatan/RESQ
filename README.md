@@ -68,6 +68,7 @@ RESQ is a web-based interactive first-aid assistant that guides users through em
 **Team Phoenix** | EPL '26 – Med Mavericks Track
 
 | Name |
+|---------------|
 |Nandhitha Ratan|
 |Shikha Maity   |
 |Sree Vidhya    |
