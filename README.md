@@ -20,27 +20,26 @@
 ---
 
 ## 📌 Table of Contents
-- [Problem](#problem)
-- [Solution](#solution)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Demo](#demo)
-- [Team](#team)
-- [SDGs](#sdgs)
-
+- [Problem](#-problem)
+- [Solution](#-solution)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Demo](#-demo)
+- [Team](#-team)
+- [SDGs](#-sdgs)
 ---
 
-## ❗ Problem
+##  Problem
 In emergency situations, most people panic and lack the knowledge to provide immediate first-aid. Existing solutions are English-only, text-heavy, and inaccessible to non-English speakers and people in rural areas.
 
 ---
 
-## ✅ Solution
+##  Solution
 RESQ is a web-based interactive first-aid assistant that guides users through emergencies in their own language — with voice input, home remedies, and real-time hospital finding.
 
 ---
 
-## ✨ Features
+##  Features
 - 🩹 **Injury Selector** – Visual menu for quick injury identification
 - 🎙️ **Voice Input** – Speak in Telugu/Hindi, no typing needed
 - 🌿 **Indian Home Remedies** – Turmeric, aloe vera, neem based suggestions
@@ -50,7 +49,7 @@ RESQ is a web-based interactive first-aid assistant that guides users through em
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
@@ -59,12 +58,12 @@ RESQ is a web-based interactive first-aid assistant that guides users through em
 
 ---
 
-## 🎥 Demo
+##  Demo
 > Full demo video coming soon — EPL '26 Week 2 Submission
 
 ---
 
-## 👥 Team
+##  Team
 **Team Phoenix** | EPL '26 – Med Mavericks Track
 
 | Name |
@@ -75,7 +74,7 @@ RESQ is a web-based interactive first-aid assistant that guides users through em
 
 ---
 
-## 🌍 SDGs
+##  SDGs
 | Goal | Description |
 |------|-------------|
 | ![SDG3](https://img.shields.io/badge/SDG%203-Good%20Health%20%26%20Well--being-4C9F38) | Providing accessible first-aid guidance |
