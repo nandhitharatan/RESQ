@@ -1,6 +1,6 @@
  :root {
-    --bg: #ede8dc;
-    --bg-card: #f7f4ef;
+    --bg: #e0d9cc;
+    --bg-card: #ede8dc;
     --header: #2d3748;
     --text: #1a202c;
     --text-muted: #718096;
@@ -48,7 +48,7 @@
   /* FLOATING VOICE BUTTON */
   .voice-fab-wrap {
     position:fixed;
-    bottom:100px;
+    bottom:80px;
     left:50%;
     transform:translateX(-50%);
     z-index:300;
@@ -177,6 +177,6 @@
   .done-actions { display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px; }
 
   /* BOTTOM BAR — language switcher only, no severity */
-  .bottom-bar { position:fixed; bottom:0; left:0; right:0; background:var(--white); border-top:1.5px solid #d9d4c7; padding: 10px 20px 88px;; display:flex; justify-content:center; align-items:center; gap:12px; z-index:200; }
+  .bottom-bar { position:fixed; bottom:0; left:0; right:0; background:var(--white); border-top:1.5px solid #d9d4c7; padding:10px 20px 14px; display:flex; justify-content:center; align-items:center; gap:12px; z-index:200; }
   .bottom-lang-btn { background:var(--bg); border:1.5px solid #d9d4c7; border-radius:10px; padding:8px 20px; font-size:14px; font-weight:700; cursor:pointer; font-family:'DM Sans',sans-serif; color:var(--text); transition:all 0.2s; }
   .bottom-lang-btn.active-lang { background:var(--header); color:white; border-color:var(--header); }
