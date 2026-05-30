@@ -109,12 +109,12 @@ function renderStep() {
   document.getElementById('bigInstruction').textContent = step.instruction;
   document.getElementById('normalTreatment').textContent = step.normal;
   document.getElementById('homeTreatment').textContent = step.remedy;
-  document.getElementById('nextBtnText').textContent = currentStep === total - 1 ? t.allDone : t.nextStep;
+  document.getElementById('nextBtnText').textContent = currentStep === total - 1 ? t.sevCheck : t.nextStep;
 
   // Show severity button only on last step
   const sevBtn = document.getElementById('sevInlineBtn');
   document.getElementById('sevInlineBtnText').textContent = t.sevCheck;
-  sevBtn.classList.toggle('visible', currentStep === total - 1);
+  sevBtn.classList.toggle('visible', false);
 }
 
 function nextStep() {
@@ -122,10 +122,9 @@ function nextStep() {
     currentStep++;
     renderStep();
   } else {
-    showScreen('doneScreen');
+    showSeverity();
   }
 }
-
 function goHome() {
   showScreen('homeScreen');
   if (window.speechSynthesis) window.speechSynthesis.cancel();
@@ -191,15 +190,7 @@ function calcSeverity() {
 
 // ── Utility ────────────────────────────────────────────────
 function call108() { window.location.href = 'tel:108'; }
-function openMaps() {
-  try {
-    const w = window.open('https://www.google.com/maps/search/hospitals+near+me', '_blank');
-    if (!w) throw new Error('Popup blocked');
-  } catch (e) {
-    // Fallback: navigate in same tab if popup blocked
-    window.location.href = 'https://www.google.com/maps/search/hospitals+near+me';
-  }
-}
+// openMaps() is now handled by maps.js
 
 // ── Init ───────────────────────────────────────────────────
 renderInjuries();

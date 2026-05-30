@@ -96,7 +96,7 @@ function speakStep() {
     const utter = new SpeechSynthesisUtterance(text);
     utter.lang = targetLang;
     utter.rate = 0.9;    // Moderate pace
-    utter.pitch = 0.95;  // Slightly calm pitch
+    utter.pitch = 0.85;  // Slightly calm pitch
 
     // Try to pick a natural-sounding, calm voice
     const voices = window.speechSynthesis.getVoices();
