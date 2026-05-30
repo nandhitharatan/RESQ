@@ -50,6 +50,78 @@ const sevQsMap = {
     { q:"Did they lose consciousness?", opts:["No","Briefly (under 1 min)","Yes, over 1 minute"], scores:[0,1,2] },
     { q:"Any vomiting, seizure or unequal pupils?", opts:["None","One of these","Two or more"], scores:[0,1,2] },
     { q:"How severe was the impact?", opts:["Minor bump","Moderate fall","High speed or hard impact"], scores:[0,1,2] }
+  ],
+  "Cardiac Arrest":[
+    { q:"Is the person breathing?", opts:["Yes, normally","Gasping only","No breathing at all"], scores:[0,1,2] },
+    { q:"Do they have a pulse?", opts:["Yes, clear pulse","Faint or unsure","No pulse felt"], scores:[0,1,2] },
+    { q:"Are they conscious?", opts:["Awake and responsive","Confused or drowsy","Completely unresponsive"], scores:[0,1,2] },
+    { q:"How long have they been unresponsive?", opts:["Just now","1–3 minutes","More than 3 minutes"], scores:[0,1,2] }
+  ],
+  "Severe Bleeding":[
+    { q:"How heavy is the bleeding?", opts:["Slow drip","Steady flow","Spurting or soaking through fast"], scores:[0,1,2] },
+    { q:"Has the bleeding slowed with pressure?", opts:["Yes, mostly stopped","Slowed but still going","No change or getting worse"], scores:[0,1,2] },
+    { q:"Where is the wound?", opts:["Limb (arm or leg)","Trunk (chest/abdomen)","Head, neck or groin"], scores:[0,1,2] },
+    { q:"Signs of shock? (pale, faint, rapid pulse)", opts:["None","One sign","Two or more signs"], scores:[0,1,2] }
+  ],
+  "Stroke":[
+    { q:"Is their face drooping on one side?", opts:["No","Slightly","Clearly drooping"], scores:[0,1,2] },
+    { q:"Can they raise both arms equally?", opts:["Yes","One arm drifts down","Cannot raise one arm"], scores:[0,1,2] },
+    { q:"Is their speech slurred or confused?", opts:["Normal","Slightly slurred","Cannot speak or makes no sense"], scores:[0,1,2] },
+    { q:"When did symptoms start?", opts:["Within the last hour","1–3 hours ago","Over 3 hours or unknown"], scores:[0,1,2] }
+  ],
+  "Anaphylaxis":[
+    { q:"Is there throat swelling or trouble breathing?", opts:["No","Mild difficulty","Severe — can barely breathe"], scores:[0,1,2] },
+    { q:"Is there a rash, hives or skin flushing?", opts:["No","Mild rash","Widespread hives or swelling"], scores:[0,1,2] },
+    { q:"Do they feel faint or have a very low BP?", opts:["No","Slightly dizzy","Faint or collapsed"], scores:[0,1,2] },
+    { q:"Do they have an EpiPen available?", opts:["Yes, used it","Yes, not used yet","No EpiPen available"], scores:[0,1,2] }
+  ],
+  "Heart Attack":[
+    { q:"How severe is the chest pain?", opts:["Mild discomfort","Moderate pressure","Crushing or unbearable"], scores:[0,1,2] },
+    { q:"Is pain spreading to arm, jaw or back?", opts:["No","Mild tingling","Clear radiating pain"], scores:[0,1,2] },
+    { q:"Any sweating, nausea or shortness of breath?", opts:["None","One symptom","Two or more symptoms"], scores:[0,1,2] },
+    { q:"Is the person conscious and breathing?", opts:["Fully conscious","Confused or drowsy","Unconscious or not breathing"], scores:[0,1,2] }
+  ],
+  "Seizure":[
+    { q:"How long did the seizure last?", opts:["Under 2 minutes","2–5 minutes","Over 5 minutes"], scores:[0,1,2] },
+    { q:"Is this their first ever seizure?", opts:["No, known history","Unsure","Yes, first time"], scores:[0,1,2] },
+    { q:"Are they fully awake and alert now?", opts:["Yes, back to normal","Groggy but responding","Still unresponsive"], scores:[0,1,2] },
+    { q:"Were they injured during the seizure?", opts:["No injury","Minor bruise or cut","Head injury or serious wound"], scores:[0,1,2] }
+  ],
+  "Snake Bite":[
+    { q:"Is the wound swelling or changing color?", opts:["No change","Mild swelling","Rapid swelling or discoloration"], scores:[0,1,2] },
+    { q:"Any dizziness, nausea or difficulty breathing?", opts:["None","One symptom","Two or more symptoms"], scores:[0,1,2] },
+    { q:"Was the snake identified as venomous?", opts:["Likely non-venomous","Unknown","Known venomous species"], scores:[0,1,2] },
+    { q:"How long since the bite?", opts:["Under 30 minutes","30 min – 1 hour","Over 1 hour"], scores:[0,1,2] }
+  ],
+  "Heat Stroke":[
+    { q:"Is the person sweating?", opts:["Yes, sweating normally","Minimal sweating","No sweating at all (dry hot skin)"], scores:[0,1,2] },
+    { q:"Are they confused or disoriented?", opts:["Fully alert","Slightly confused","Very confused or unresponsive"], scores:[0,1,2] },
+    { q:"What is their estimated body temperature?", opts:["Below 38°C","38–40°C","Above 40°C"], scores:[0,1,2] },
+    { q:"How long in the heat without water?", opts:["Under 30 minutes","30 min – 2 hours","Over 2 hours"], scores:[0,1,2] }
+  ],
+  "Pregnancy Emergency":[
+    { q:"How heavy is the vaginal bleeding?", opts:["Light spotting","Moderate flow","Heavy soaking or clots"], scores:[0,1,2] },
+    { q:"Is the baby's arrival imminent?", opts:["No contractions","Mild contractions","Strong, frequent contractions"], scores:[0,1,2] },
+    { q:"Is the mother conscious and responsive?", opts:["Fully alert","Confused or weak","Unconscious or collapsed"], scores:[0,1,2] },
+    { q:"What is the stage of pregnancy?", opts:["After 37 weeks (term)","28–36 weeks","Under 28 weeks"], scores:[0,1,2] }
+  ],
+  "Child Febrile Seizure":[
+    { q:"How long did the seizure last?", opts:["Under 2 minutes","2–5 minutes","Over 5 minutes"], scores:[0,1,2] },
+    { q:"Is the child fully awake now?", opts:["Yes, alert and crying","Drowsy but responding","Still unresponsive"], scores:[0,1,2] },
+    { q:"What is the child's temperature?", opts:["Below 38.5°C","38.5–40°C","Above 40°C"], scores:[0,1,2] },
+    { q:"Has this happened before?", opts:["Yes, known history","Unsure","First time ever"], scores:[0,1,2] }
+  ],
+  "Poisoning":[
+    { q:"What type of substance was taken?", opts:["Food or medicine","Household chemical","Industrial chemical or unknown"], scores:[0,1,2] },
+    { q:"How much was ingested?", opts:["Small amount","Moderate amount","Large amount or overdose"], scores:[0,1,2] },
+    { q:"Is the person conscious and breathing?", opts:["Fully alert","Drowsy or vomiting","Unconscious or not breathing"], scores:[0,1,2] },
+    { q:"How long ago was it taken?", opts:["Under 30 minutes","30 min – 2 hours","Over 2 hours ago"], scores:[0,1,2] }
+  ],
+  "Fainting":[
+    { q:"Have they fully regained consciousness?", opts:["Yes, fully alert","Groggy but responding","Still unresponsive"], scores:[0,1,2] },
+    { q:"Did they injure themselves in the fall?", opts:["No","Minor bruise or scrape","Head injury or serious wound"], scores:[0,1,2] },
+    { q:"Was there chest pain or palpitations before fainting?", opts:["No","Mild palpitations","Chest pain or pressure"], scores:[0,1,2] },
+    { q:"Is this the first time they have fainted?", opts:["No, happened before","Unsure","Yes, first time"], scores:[0,1,2] }
   ]
 };
 
@@ -101,11 +173,83 @@ const sevQsMap_te = {
     { q:"స్పృహ కోల్పోయారా?", opts:["లేదు","తక్కువ సేపు (1 నిమిషం లోపు)","అవును, 1 నిమిషం కంటే ఎక్కువ"], scores:[0,1,2] },
     { q:"వాంతి, మూర్ఛ లేదా అసమాన కళ్ళు ఉన్నాయా?", opts:["ఏమీ లేదు","వాటిలో ఒకటి","రెండు లేదా అంతకంటే ఎక్కువ"], scores:[0,1,2] },
     { q:"దెబ్బ ఎంత తీవ్రంగా ఉంది?", opts:["చిన్న తగలడం","మధ్యస్థ పడటం","అధిక వేగంతో లేదా తీవ్రమైన దెబ్బ"], scores:[0,1,2] }
+  ],
+  "గుండె ఆగిపోవడం":[
+    { q:"వ్యక్తి శ్వాస తీసుకుంటున్నారా?", opts:["అవును, సాధారణంగా","వేగంగా గుటకలు మింగుతున్నారు","శ్వాస అస్సలు లేదు"], scores:[0,1,2] },
+    { q:"నాడి ఉందా?", opts:["అవును, స్పష్టంగా","మందంగా లేదా అనిశ్చితంగా","నాడి అనుభవపడట్లేదు"], scores:[0,1,2] },
+    { q:"స్పృహలో ఉన్నారా?", opts:["మేలుకొని స్పందిస్తున్నారు","గందరగోళంగా లేదా నిద్రమత్తుగా","పూర్తిగా స్పందన లేదు"], scores:[0,1,2] },
+    { q:"స్పందన లేకుండా ఎంత సేపు అయింది?", opts:["ఇప్పుడే","1–3 నిమిషాలు","3 నిమిషాలకు పైగా"], scores:[0,1,2] }
+  ],
+  "తీవ్రమైన రక్తస్రావం":[
+    { q:"రక్తస్రావం ఎంత తీవ్రంగా ఉంది?", opts:["నెమ్మదిగా చుక్కలు","స్థిరమైన ప్రవాహం","వేగంగా చిమ్ముతోంది"], scores:[0,1,2] },
+    { q:"నొక్కుడుతో రక్తస్రావం తగ్గిందా?", opts:["అవును, ఎక్కువగా ఆగింది","తగ్గింది కానీ కొనసాగుతోంది","మార్పు లేదు లేదా మరింత పెరిగింది"], scores:[0,1,2] },
+    { q:"గాయం ఎక్కడ ఉంది?", opts:["చేయి లేదా కాలు","ఛాతీ లేదా కడుపు","తల, మెడ లేదా తొడ"], scores:[0,1,2] },
+    { q:"షాక్ సంకేతాలు ఉన్నాయా? (పాలిపోవడం, తల తిరగడం, వేగవంతమైన నాడి)", opts:["లేదు","ఒక సంకేతం","రెండు లేదా అంతకంటే ఎక్కువ"], scores:[0,1,2] }
+  ],
+  "స్ట్రోక్":[
+    { q:"ముఖం ఒక వైపు వంగిందా?", opts:["లేదు","కొద్దిగా","స్పష్టంగా వంగింది"], scores:[0,1,2] },
+    { q:"రెండు చేతులూ సమానంగా పైకి లేపగలరా?", opts:["అవును","ఒక చేయి క్రిందకు వాలుతోంది","ఒక చేయి అస్సలు లేపలేకపోతున్నారు"], scores:[0,1,2] },
+    { q:"మాట అస్పష్టంగా లేదా గందరగోళంగా ఉందా?", opts:["సాధారణంగా ఉంది","కొద్దిగా అస్పష్టంగా","మాట్లాడలేకపోతున్నారు"], scores:[0,1,2] },
+    { q:"లక్షణాలు ఎప్పుడు మొదలయ్యాయి?", opts:["గంట లోపు","1–3 గంటల క్రితం","3 గంటలకు పైగా లేదా తెలియదు"], scores:[0,1,2] }
+  ],
+  "అనాఫైలాక్సిస్":[
+    { q:"గొంతు వాపు లేదా శ్వాస తీసుకోవడంలో కష్టం ఉందా?", opts:["లేదు","తేలికపాటి కష్టం","తీవ్రంగా — శ్వాస తీసుకోవడం కష్టంగా ఉంది"], scores:[0,1,2] },
+    { q:"దద్దుర్లు, చర్మం ఎర్రబడటం ఉందా?", opts:["లేదు","తేలికపాటి దద్దుర్లు","విస్తృతమైన దద్దుర్లు లేదా వాపు"], scores:[0,1,2] },
+    { q:"తల తిరుగుతోందా లేదా రక్తపోటు చాలా తక్కువగా ఉందా?", opts:["లేదు","కొద్దిగా తల తిరగడం","స్పృహ తప్పుతోంది లేదా పడిపోయారు"], scores:[0,1,2] },
+    { q:"EpiPen అందుబాటులో ఉందా?", opts:["అవును, వాడారు","అవును, ఇంకా వాడలేదు","EpiPen లేదు"], scores:[0,1,2] }
+  ],
+  "గుండె పోటు":[
+    { q:"ఛాతీ నొప్పి ఎంత తీవ్రంగా ఉంది?", opts:["తేలికపాటి అసౌకర్యం","మధ్యస్థ ఒత్తిడి","నలిపే లేదా తట్టుకోలేనిది"], scores:[0,1,2] },
+    { q:"నొప్పి చేయికి, దవడకు లేదా వీపుకు వ్యాపిస్తోందా?", opts:["లేదు","తేలికపాటి జివ్వురు","స్పష్టంగా వ్యాపిస్తున్న నొప్పి"], scores:[0,1,2] },
+    { q:"చెమట, వికారం లేదా శ్వాస కష్టం ఉందా?", opts:["ఏమీ లేదు","ఒక లక్షణం","రెండు లేదా అంతకంటే ఎక్కువ లక్షణాలు"], scores:[0,1,2] },
+    { q:"వ్యక్తి స్పృహలో మరియు శ్వాస తీసుకుంటున్నారా?", opts:["పూర్తిగా స్పృహలో","గందరగోళంగా లేదా బలహీనంగా","స్పృహ లేదు లేదా శ్వాస లేదు"], scores:[0,1,2] }
+  ],
+  "మూర్ఛ":[
+    { q:"మూర్ఛ ఎంత సేపు ఉంది?", opts:["2 నిమిషాల లోపు","2–5 నిమిషాలు","5 నిమిషాలకు పైగా"], scores:[0,1,2] },
+    { q:"ఇది వారికి మొదటి మూర్ఛా?", opts:["లేదు, చరిత్ర ఉంది","తెలియదు","అవును, మొదటిసారి"], scores:[0,1,2] },
+    { q:"ఇప్పుడు పూర్తిగా మేలుకొని అప్రమత్తంగా ఉన్నారా?", opts:["అవును, సాధారణంగా","నిద్రమత్తుగా కానీ స్పందిస్తున్నారు","ఇంకా స్పందన లేదు"], scores:[0,1,2] },
+    { q:"మూర్ఛ సమయంలో గాయపడ్డారా?", opts:["గాయం లేదు","చిన్న గాయం లేదా కోత","తల గాయం లేదా తీవ్రమైన గాయం"], scores:[0,1,2] }
+  ],
+  "పాము కాటు":[
+    { q:"గాయం వద్ద వాపు లేదా రంగు మారుతోందా?", opts:["మార్పు లేదు","తేలికపాటి వాపు","వేగంగా వాపు లేదా రంగు మారడం"], scores:[0,1,2] },
+    { q:"తల తిరగడం, వికారం లేదా శ్వాస కష్టం ఉందా?", opts:["ఏమీ లేదు","ఒక లక్షణం","రెండు లేదా అంతకంటే ఎక్కువ"], scores:[0,1,2] },
+    { q:"పాము విషపూరితమైనదని గుర్తింపబడిందా?", opts:["సాధ్యంగా విషపూరితం కాదు","తెలియదు","తెలిసిన విషపూరిత జాతి"], scores:[0,1,2] },
+    { q:"కాటు వేసి ఎంత సేపు అయింది?", opts:["30 నిమిషాల లోపు","30 నిమిషాలు – 1 గంట","1 గంటకు పైగా"], scores:[0,1,2] }
+  ],
+  "హీట్ స్ట్రోక్":[
+    { q:"వ్యక్తి చెమట పడుతున్నారా?", opts:["అవును, సాధారణంగా","చాలా తక్కువ చెమట","అస్సలు చెమట లేదు (పొడి వేడి చర్మం)"], scores:[0,1,2] },
+    { q:"గందరగోళంగా లేదా దిక్కుతోచకుండా ఉన్నారా?", opts:["పూర్తిగా అప్రమత్తంగా","కొద్దిగా గందరగోళంగా","చాలా గందరగోళంగా లేదా స్పందన లేదు"], scores:[0,1,2] },
+    { q:"అంచనా శరీర ఉష్ణోగ్రత ఎంత?", opts:["38°C కంటే తక్కువ","38–40°C","40°C కంటే ఎక్కువ"], scores:[0,1,2] },
+    { q:"నీళ్ళు తాగకుండా వేడిలో ఎంత సేపు ఉన్నారు?", opts:["30 నిమిషాల లోపు","30 నిమిషాలు – 2 గంటలు","2 గంటలకు పైగా"], scores:[0,1,2] }
+  ],
+  "గర్భకాల అత్యవసరం":[
+    { q:"యోనిలో రక్తస్రావం ఎంత ఎక్కువగా ఉంది?", opts:["తేలికపాటి మచ్చలు","మధ్యస్థ ప్రవాహం","భారీ రక్తస్రావం లేదా గడ్డలు"], scores:[0,1,2] },
+    { q:"శిశువు రాక సమీపంగా ఉందా?", opts:["సంకోచాలు లేవు","తేలికపాటి సంకోచాలు","బలమైన, తరచుగా సంకోచాలు"], scores:[0,1,2] },
+    { q:"తల్లి స్పృహలో మరియు స్పందిస్తున్నారా?", opts:["పూర్తిగా అప్రమత్తంగా","గందరగోళంగా లేదా బలహీనంగా","స్పృహ లేదు లేదా పడిపోయారు"], scores:[0,1,2] },
+    { q:"గర్భం యొక్క దశ ఏమిటి?", opts:["37 వారాల తర్వాత (పూర్తి కాలం)","28–36 వారాలు","28 వారాల లోపు"], scores:[0,1,2] }
+  ],
+  "పిల్లల జ్వర మూర్ఛ":[
+    { q:"మూర్ఛ ఎంత సేపు ఉంది?", opts:["2 నిమిషాల లోపు","2–5 నిమిషాలు","5 నిమిషాలకు పైగా"], scores:[0,1,2] },
+    { q:"పిల్లవాడు ఇప్పుడు పూర్తిగా మేలుకొని ఉన్నారా?", opts:["అవును, అప్రమత్తంగా మరియు ఏడుస్తున్నారు","నిద్రమత్తుగా కానీ స్పందిస్తున్నారు","ఇంకా స్పందన లేదు"], scores:[0,1,2] },
+    { q:"పిల్లవాడి ఉష్ణోగ్రత ఎంత?", opts:["38.5°C కంటే తక్కువ","38.5–40°C","40°C కంటే ఎక్కువ"], scores:[0,1,2] },
+    { q:"ఇంతకు ముందు ఇలా జరిగిందా?", opts:["అవును, తెలిసిన చరిత్ర","తెలియదు","మొదటిసారి"], scores:[0,1,2] }
+  ],
+  "విషప్రయోగం":[
+    { q:"ఏ రకమైన పదార్థం తీసుకున్నారు?", opts:["ఆహారం లేదా మందు","గృహ రసాయనం","పారిశ్రామిక రసాయనం లేదా తెలియదు"], scores:[0,1,2] },
+    { q:"ఎంత పరిమాణం మింగారు?", opts:["చిన్న పరిమాణం","మధ్యస్థ పరిమాణం","పెద్ద పరిమాణం లేదా అధిక మోతాదు"], scores:[0,1,2] },
+    { q:"వ్యక్తి స్పృహలో మరియు శ్వాస తీసుకుంటున్నారా?", opts:["పూర్తిగా అప్రమత్తంగా","నిద్రమత్తుగా లేదా వాంతి అవుతున్నారు","స్పృహ లేదు లేదా శ్వాస లేదు"], scores:[0,1,2] },
+    { q:"ఎంత సేపటి క్రితం తీసుకున్నారు?", opts:["30 నిమిషాల లోపు","30 నిమిషాలు – 2 గంటలు","2 గంటలకు పైగా"], scores:[0,1,2] }
+  ],
+  "స్పృహ తప్పడం":[
+    { q:"వ్యక్తి పూర్తిగా స్పృహలోకి వచ్చారా?", opts:["అవును, పూర్తిగా అప్రమత్తంగా","నిద్రమత్తుగా కానీ స్పందిస్తున్నారు","ఇంకా స్పందన లేదు"], scores:[0,1,2] },
+    { q:"పడిపోవడంలో గాయపడ్డారా?", opts:["లేదు","చిన్న గాయం లేదా కోత","తల గాయం లేదా తీవ్రమైన గాయం"], scores:[0,1,2] },
+    { q:"స్పృహ తప్పడానికి ముందు ఛాతీ నొప్పి లేదా గుండె వేగంగా కొట్టుకోవడం ఉందా?", opts:["లేదు","తేలికపాటి గుండె దడ","ఛాతీ నొప్పి లేదా ఒత్తిడి"], scores:[0,1,2] },
+    { q:"ఇది వారికి మొదటిసారి స్పృహ తప్పడమా?", opts:["లేదు, ముందు కూడా జరిగింది","తెలియదు","అవును, మొదటిసారి"], scores:[0,1,2] }
   ]
 };
 
 const sevQsMap_hi = {
-  "జలना":[
+  "जलना":[
     { q:"जला हुआ हिस्सा कितना बड़ा है?", opts:["छोटा (सिक्के जितना)","हथेली जितना","हथेली से बड़ा"], scores:[0,1,2] },
     { q:"त्वचा कैसी दिखती है?", opts:["लाल और दर्दनाक","फफोले पड़ गए हैं","सफेद, काली या जली हुई"], scores:[0,1,2] },
     { q:"जलन कहाँ है?", opts:["हाथ या पैर","छाती या पीठ","चेहरा, हाथ या जननांग"], scores:[0,1,2] },
@@ -152,13 +296,87 @@ const sevQsMap_hi = {
     { q:"क्या उन्होंने होश खोया?", opts:["नहीं","थोड़ी देर के लिए (1 मिनट से कम)","हाँ, 1 मिनट से ज़्यादा"], scores:[0,1,2] },
     { q:"उल्टी, दौरे या असमान पुतलियाँ हैं?", opts:["कोई नहीं","इनमें से एक","दो या ज़्यादा"], scores:[0,1,2] },
     { q:"चोट कितनी ज़ोरदार थी?", opts:["हल्की टक्कर","मध्यम गिरना","तेज़ रफ़्तार या कड़ी टक्कर"], scores:[0,1,2] }
+  ],
+  "कार्डियक अरेस्ट":[
+    { q:"क्या व्यक्ति सांस ले रहा है?", opts:["हाँ, सामान्य रूप से","केवल हांफ रहे हैं","बिल्कुल सांस नहीं"], scores:[0,1,2] },
+    { q:"क्या नब्ज़ है?", opts:["हाँ, स्पष्ट नब्ज़","कमज़ोर या अनिश्चित","कोई नब्ज़ नहीं"], scores:[0,1,2] },
+    { q:"क्या वे होश में हैं?", opts:["जाग रहे हैं और जवाब दे रहे हैं","भ्रमित या नींद में","पूरी तरह बेहोश"], scores:[0,1,2] },
+    { q:"कितने समय से बेहोश हैं?", opts:["अभी-अभी","1–3 मिनट","3 मिनट से ज़्यादा"], scores:[0,1,2] }
+  ],
+  "गंभीर रक्तस्राव":[
+    { q:"खून बहना कितना तेज़ है?", opts:["धीमी बूंदें","लगातार बहाव","तेज़ धार या जल्दी भीग जाना"], scores:[0,1,2] },
+    { q:"दबाने से खून धीमा हुआ?", opts:["हाँ, लगभग बंद हो गया","धीमा हुआ पर जारी है","कोई बदलाव नहीं या और बढ़ गया"], scores:[0,1,2] },
+    { q:"घाव कहाँ है?", opts:["हाथ या पैर","छाती या पेट","सिर, गर्दन या जांघ"], scores:[0,1,2] },
+    { q:"शॉक के संकेत हैं? (पीलापन, चक्कर, तेज़ नब्ज़)", opts:["कोई नहीं","एक संकेत","दो या ज़्यादा संकेत"], scores:[0,1,2] }
+  ],
+  "स्ट्रोक":[
+    { q:"क्या चेहरा एक तरफ झुक रहा है?", opts:["नहीं","थोड़ा","स्पष्ट रूप से झुका हुआ"], scores:[0,1,2] },
+    { q:"क्या वे दोनों बाहें बराबर उठा सकते हैं?", opts:["हाँ","एक बांह नीचे आ जाती है","एक बांह बिल्कुल नहीं उठा सकते"], scores:[0,1,2] },
+    { q:"क्या बोली अस्पष्ट या भ्रमित है?", opts:["सामान्य","थोड़ी अस्पष्ट","बोल नहीं सकते या समझ नहीं आता"], scores:[0,1,2] },
+    { q:"लक्षण कब शुरू हुए?", opts:["पिछले एक घंटे में","1–3 घंटे पहले","3 घंटे से ज़्यादा या पता नहीं"], scores:[0,1,2] }
+  ],
+  "एनाफिलेक्सिस":[
+    { q:"गले में सूजन या सांस लेने में दिक्कत?", opts:["नहीं","हल्की दिक्कत","गंभीर — मुश्किल से सांस आ रही है"], scores:[0,1,2] },
+    { q:"दाने, पित्ती या त्वचा लाल है?", opts:["नहीं","हल्के दाने","व्यापक पित्ती या सूजन"], scores:[0,1,2] },
+    { q:"चक्कर आ रहा है या BP बहुत कम है?", opts:["नहीं","हल्का चक्कर","बेहोश हो रहे हैं या गिर पड़े"], scores:[0,1,2] },
+    { q:"क्या EpiPen उपलब्ध है?", opts:["हाँ, इस्तेमाल किया","हाँ, अभी तक नहीं किया","EpiPen नहीं है"], scores:[0,1,2] }
+  ],
+  "हार्ट अटैक":[
+    { q:"सीने का दर्द कितना तेज़ है?", opts:["हल्की तकलीफ","मध्यम दबाव","कुचलने जैसा या असहनीय"], scores:[0,1,2] },
+    { q:"दर्द बांह, जबड़े या पीठ में फैल रहा है?", opts:["नहीं","हल्की झनझनाहट","स्पष्ट रूप से फैलता दर्द"], scores:[0,1,2] },
+    { q:"पसीना, मतली या सांस में तकलीफ?", opts:["कोई नहीं","एक लक्षण","दो या ज़्यादा लक्षण"], scores:[0,1,2] },
+    { q:"क्या व्यक्ति होश में और सांस ले रहा है?", opts:["पूरी तरह होश में","भ्रमित या कमज़ोर","बेहोश या सांस नहीं"], scores:[0,1,2] }
+  ],
+  "दौरा":[
+    { q:"दौरा कितने समय तक रहा?", opts:["2 मिनट से कम","2–5 मिनट","5 मिनट से ज़्यादा"], scores:[0,1,2] },
+    { q:"क्या यह पहली बार दौरा पड़ा?", opts:["नहीं, पहले भी हुआ है","पता नहीं","हाँ, पहली बार"], scores:[0,1,2] },
+    { q:"क्या अब पूरी तरह होश में और सतर्क हैं?", opts:["हाँ, सामान्य","नींद में पर जवाब दे रहे हैं","अभी भी कोई प्रतिक्रिया नहीं"], scores:[0,1,2] },
+    { q:"दौरे के दौरान चोट लगी?", opts:["कोई चोट नहीं","मामूली खरोंच या कट","सिर में चोट या गंभीर घाव"], scores:[0,1,2] }
+  ],
+  "सांप का काटना":[
+    { q:"घाव पर सूजन या रंग बदल रहा है?", opts:["कोई बदलाव नहीं","हल्की सूजन","तेज़ सूजन या रंग बदलना"], scores:[0,1,2] },
+    { q:"चक्कर, मतली या सांस में दिक्कत?", opts:["कोई नहीं","एक लक्षण","दो या ज़्यादा"], scores:[0,1,2] },
+    { q:"क्या सांप ज़हरीला था?", opts:["शायद ज़हरीला नहीं","पता नहीं","ज्ञात ज़हरीली प्रजाति"], scores:[0,1,2] },
+    { q:"काटे हुए कितना समय हुआ?", opts:["30 मिनट से कम","30 मिनट – 1 घंटा","1 घंटे से ज़्यादा"], scores:[0,1,2] }
+  ],
+  "हीट स्ट्रोक":[
+    { q:"क्या व्यक्ति को पसीना आ रहा है?", opts:["हाँ, सामान्य रूप से","बहुत कम पसीना","बिल्कुल पसीना नहीं (सूखी गर्म त्वचा)"], scores:[0,1,2] },
+    { q:"क्या वे भ्रमित या दिशाहीन हैं?", opts:["पूरी तरह सतर्क","थोड़ा भ्रमित","बहुत भ्रमित या कोई प्रतिक्रिया नहीं"], scores:[0,1,2] },
+    { q:"अनुमानित शरीर का तापमान क्या है?", opts:["38°C से कम","38–40°C","40°C से ज़्यादा"], scores:[0,1,2] },
+    { q:"पानी पिए बिना गर्मी में कितने समय से हैं?", opts:["30 मिनट से कम","30 मिनट – 2 घंटे","2 घंटे से ज़्यादा"], scores:[0,1,2] }
+  ],
+  "गर्भावस्था आपातकाल":[
+    { q:"योनि से रक्तस्राव कितना भारी है?", opts:["हल्के धब्बे","मध्यम बहाव","भारी खून या थक्के"], scores:[0,1,2] },
+    { q:"क्या बच्चे का जन्म तुरंत होने वाला है?", opts:["कोई संकुचन नहीं","हल्के संकुचन","तेज़, बार-बार संकुचन"], scores:[0,1,2] },
+    { q:"क्या माँ होश में और जवाब दे रही हैं?", opts:["पूरी तरह सतर्क","भ्रमित या कमज़ोर","बेहोश या गिर पड़ी"], scores:[0,1,2] },
+    { q:"गर्भावस्था का चरण क्या है?", opts:["37 हफ्ते के बाद (पूर्ण अवधि)","28–36 हफ्ते","28 हफ्ते से कम"], scores:[0,1,2] }
+  ],
+  "बच्चे को ज्वर दौरा":[
+    { q:"दौरा कितने समय तक रहा?", opts:["2 मिनट से कम","2–5 मिनट","5 मिनट से ज़्यादा"], scores:[0,1,2] },
+    { q:"क्या बच्चा अब पूरी तरह जाग रहा है?", opts:["हाँ, सतर्क और रो रहा है","नींद में पर जवाब दे रहा है","अभी भी कोई प्रतिक्रिया नहीं"], scores:[0,1,2] },
+    { q:"बच्चे का तापमान क्या है?", opts:["38.5°C से कम","38.5–40°C","40°C से ज़्यादा"], scores:[0,1,2] },
+    { q:"क्या पहले भी ऐसा हुआ है?", opts:["हाँ, पहले भी हुआ है","पता नहीं","पहली बार"], scores:[0,1,2] }
+  ],
+  "ज़हर खाना":[
+    { q:"कौन सा पदार्थ लिया गया?", opts:["खाना या दवा","घरेलू रसायन","औद्योगिक रसायन या अज्ञात"], scores:[0,1,2] },
+    { q:"कितनी मात्रा निगली गई?", opts:["थोड़ी मात्रा","मध्यम मात्रा","बड़ी मात्रा या ओवरडोज़"], scores:[0,1,2] },
+    { q:"क्या व्यक्ति होश में और सांस ले रहा है?", opts:["पूरी तरह सतर्क","नींद में या उल्टी हो रही है","बेहोश या सांस नहीं"], scores:[0,1,2] },
+    { q:"कितने समय पहले लिया गया?", opts:["30 मिनट से कम","30 मिनट – 2 घंटे","2 घंटे से ज़्यादा पहले"], scores:[0,1,2] }
+  ],
+  "बेहोशी":[
+    { q:"क्या वे पूरी तरह होश में आ गए?", opts:["हाँ, पूरी तरह सतर्क","नींद में पर जवाब दे रहे हैं","अभी भी कोई प्रतिक्रिया नहीं"], scores:[0,1,2] },
+    { q:"क्या गिरने में चोट लगी?", opts:["नहीं","मामूली खरोंच या घाव","सिर में चोट या गंभीर घाव"], scores:[0,1,2] },
+    { q:"बेहोश होने से पहले सीने में दर्द या धड़कन तेज़ थी?", opts:["नहीं","हल्की धड़कन","सीने में दर्द या दबाव"], scores:[0,1,2] },
+    { q:"क्या यह पहली बार बेहोश हुए हैं?", opts:["नहीं, पहले भी हुआ है","पता नहीं","हाँ, पहली बार"], scores:[0,1,2] }
   ]
 };
 
 // Name fallback map (Telugu/Hindi name → English key)
 const nameMap = {
   "కాలిన గాయాలు":"Burns","కోతలు":"Cuts","ఎముక విరుపు":"Fracture","గొంతు అడ్డు పడటం":"Choking","జ్వరం":"Fever","కీటక కుట్టు":"Insect Sting","ముక్కు రక్తస్రావం":"Nosebleed","తల గాయం":"Head Injury",
-  "जलना":"Burns","कट लगना":"Cuts","हड्डी टूटना":"Fracture","गला घुटना":"Choking","बुखार":"Fever","कीड़े का काटना":"Insect Sting","नाक से खून":"Nosebleed","सिर की चोट":"Head Injury"
+  "గుండె ఆగిపోవడం":"Cardiac Arrest","తీవ్రమైన రక్తస్రావం":"Severe Bleeding","స్ట్రోక్":"Stroke","అనాఫైలాక్సిస్":"Anaphylaxis","గుండె పోటు":"Heart Attack","మూర్ఛ":"Seizure","పాము కాటు":"Snake Bite","హీట్ స్ట్రోక్":"Heat Stroke","గర్భకాల అత్యవసరం":"Pregnancy Emergency","పిల్లల జ్వర మూర్ఛ":"Child Febrile Seizure","విషప్రయోగం":"Poisoning","స్పృహ తప్పడం":"Fainting",
+  "जलना":"Burns","कट लगना":"Cuts","हड्डी टूटना":"Fracture","गला घुटना":"Choking","बुखार":"Fever","कीड़े का काटना":"Insect Sting","नाक से खून":"Nosebleed","सिर की चोट":"Head Injury",
+  "कार्डियक अरेस्ट":"Cardiac Arrest","गंभीर रक्तस्राव":"Severe Bleeding","स्ट्रोक":"Stroke","एनाफिलेक्सिस":"Anaphylaxis","हार्ट अटैक":"Heart Attack","दौरा":"Seizure","सांप का काटना":"Snake Bite","हीट स्ट्रोक":"Heat Stroke","गर्भावस्था आपातकाल":"Pregnancy Emergency","बच्चे को ज्वर दौरा":"Child Febrile Seizure","ज़हर खाना":"Poisoning","बेहोशी":"Fainting"
 };
 
 // Severity result labels in all 3 languages
