@@ -123,8 +123,8 @@ function speakStep() {
 
   function _speak() {
     const utter = new SpeechSynthesisUtterance(text);
-    utter.rate = 0.85;
-    utter.pitch = 0.9;
+    utter.rate = lang === 'te' ? 1.2 : lang === 'hi' ? 1.1 : 0.9;
+    utter.pitch = 1.0;
 
     const voices = window.speechSynthesis.getVoices();
 
