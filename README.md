@@ -64,16 +64,11 @@ RESQ fills that gap:
 
 ### SDG 3 — Good Health & Well-being
 
-Every second counts in a medical emergency, yet most people freeze because they simply don't know what to do. In India, a large portion of the population has no access to quick, reliable medical guidance — especially those who don't speak English.
-
-RESQ directly tackles this by giving anyone, anywhere, instant step-by-step first aid instructions the moment something goes wrong. The built-in severity checker stops panic-driven mistakes before they happen. A one-tap 108 emergency call and a real-time nearby hospital finder ensure help is never more than a few seconds away.
+In India, most people freeze during emergencies simply because nobody taught them what to do. Existing resources are English-only and assume calm — the opposite of what an emergency looks like. RESQ gives anyone instant step-by-step first aid in their own language the moment something goes wrong. The severity checker stops panic-driven mistakes, the one-tap 108 call removes friction, and the real-time hospital finder means help is never more than a few seconds away.
 
 ### SDG 4 — Quality Education
 
-First aid is one of the most important life skills a person can have, yet it is completely ignored in Indian schools. Students spend years in classrooms but graduate without knowing how to treat a burn or stop bleeding.
-
-RESQ fills this gap — and doesn't stop at urban students. For people in remote areas, tribal regions, and villages where the nearest hospital can be hours away, knowing first aid isn't a bonus skill, it's survival. The Indian home remedies feature teaches users to use what's already in their backyards and kitchens. Every time someone in a remote village uses RESQ, they're not just getting immediate help — they're learning traditional healing methods that have worked for generations.
-
+First aid is one of the most important life skills a person can have, yet Indian schools completely ignore it. For people in remote villages where the nearest hospital can be hours away, knowing first aid isn't a bonus — it's survival. RESQ fills that gap with voice guidance in Telugu and Hindi, Indian home remedies using what's already in their kitchens, and step-by-step instructions anyone can follow without a medical background.
 > **RESQ doesn't just respond to emergencies. It educates communities to handle them — bridging the gap between health and knowledge, one user at a time.**
 
 ---
@@ -308,7 +303,7 @@ resq-first-aid/
 │
 ├── assets/
 │   ├── logo.png        ← RESQ logo
-│   └── screenshots/    ← App screenshots
+│   └── screenshots    
 │
 └── README.md           ← This file
 ```
@@ -327,98 +322,6 @@ resq-first-aid/
 
 ---
 
-## 📦 Module Reference
-
-### `data.js`
-Holds all injury data across three languages and all UI text translations.
-
-```javascript
-injuriesData['en']  // Array of 20 English injury objects
-injuriesData['te']  // Array of 20 Telugu injury objects
-injuriesData['hi']  // Array of 20 Hindi injury objects
-
-T['en']  // UI text strings in English
-T['te']  // UI text strings in Telugu
-T['hi']  // UI text strings in Hindi
-```
-
-Each injury object:
-```javascript
-{
-  icon: "🔥",
-  name: "Burns",
-  desc: "Heat, fire, hot liquid",
-  steps: [
-    {
-      instruction: "Cool the burn",
-      normal: "Hold under cool running water for 10 minutes...",
-      remedy: "After cooling, apply fresh aloe vera gel..."
-    },
-    // ... more steps
-  ]
-}
-```
-
-### `severity.js`
-Severity questions and scoring for every injury in all 3 languages.
-
-```javascript
-getSevQs(injuryName, lang)
-// Returns array of 4 questions with options and scores
-
-calcSeverityLevel(answers, totalQuestions, lang)
-// Returns { level, cls, msg, hospital, sl }
-// level: "🟢 Mild" | "🟡 Moderate" | "🔴 Severe"
-```
-
-### `voice.js`
-```javascript
-toggleVoice()
-// Starts/stops Web Speech API voice recognition
-// Maps spoken keywords → injury index → startInjury()
-
-speakStep()
-// Reads current step aloud using SpeechSynthesisUtterance
-// Handles race condition: waits for voices to load before speaking
-```
-
-### `search.js`
-```javascript
-filterInjuries(query)
-// Real-time NLP filter — hides non-matching injury cards
-
-matchInjuryIndex(query)
-// Returns injury index (0–19) from natural language input
-// Covers 20 keyword groups in EN, TE, and HI
-```
-
-### `maps.js`
-```javascript
-openMaps()
-// Requests GPS, initialises Leaflet map, queries Overpass API
-
-searchHospitals(lat, lng)
-// Fetches hospitals/clinics within 5km via Overpass
-// Sorts by Haversine distance, renders cards + map markers
-
-getDistanceKm(lat1, lng1, lat2, lng2)
-// Haversine formula — returns straight-line km distance
-```
-
-### `app.js`
-```javascript
-setLang(l)         // Switch language: 'en' | 'te' | 'hi'
-showScreen(id)     // Navigate between screens: 'lang' | 'home' | 'step' | 'severity' | 'map'
-startInjury(i)     // Load injury by index (with bounds check: 0–19)
-renderStep()       // Render current step content + progress bar
-nextStep()         // Advance step or trigger severity check on last step
-showSeverity()     // Build and show severity question screen
-calcSeverity()     // Compute result and display badge + recommendation
-goHome()           // Return to home screen, cancel TTS, reset state
-call108()          // Trigger tel:108 link
-```
-
----
 
 ## 🛡 Error Handling & Resilience
 
@@ -485,36 +388,7 @@ Five critical failure points identified and fixed during Week 3:
 
 ---
 
-## 🗓 4-Week Development Journey
 
-### Week 1 — Foundation
-- Defined problem statement and target users
-- Chose tech stack and justified every decision
-- Built initial prototype: injury selector, severity checker, 108 call
-- Covered 8 injury types in English only
-
-### Week 2 — Core Feature Build
-- Added Telugu and Hindi language support across all screens
-- Integrated Web Speech API for voice input
-- Built Indian home remedies feature
-- Added Read Aloud (TTS) for accessibility
-- Integrated real-time hospital finder (replaced Google Maps with Leaflet + Overpass)
-
-### Week 3 — Resilience & Refactoring
-- Identified and fixed 5 critical error handling cases
-- Refactored 877-line monolithic `index.html` into 6 clean modules
-- Expanded from 8 to 20 injury categories with full multilingual support
-- Upgraded NLP search to cover all 20 injury groups in 3 languages
-- Added SDG impact documentation
-
-### Week 4 — Production Ready
-- Full SDLC mapping and engineering report
-- Architecture documentation and module reference
-- Severity logic expanded to cover all 20 injuries in EN/TE/HI
-- Production README (this document)
-- Demo preparation for EPL finale
-
----
 
 ## 🌿 20 Emergencies Covered
 
