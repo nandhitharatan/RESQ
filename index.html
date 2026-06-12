@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <script>
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/RESQ/sw.js');
+   }
+  </script>
   <style>
     /* Smart Search Bar */
     .search-wrap { display:flex; align-items:center; background:rgba(255,255,255,0.12); border:1.5px solid rgba(255,255,255,0.25); border-radius:14px; padding:0 14px; margin:10px 0 8px 0; gap:8px; transition:border-color 0.2s, background 0.2s; }
